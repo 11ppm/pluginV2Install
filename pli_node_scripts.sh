@@ -408,8 +408,8 @@ FUNC_NODE_DEPLOY(){
     # Install Node Manager Package version & enable
 
     echo -e "${GREEN}## NVM install & use...${NC}"
-    nvm install 16.14.0
-    nvm use 16.14.0
+    nvm install 18.12.0
+    nvm use 18.12.0
     node --version
     
 
@@ -539,7 +539,7 @@ EOF
     npm install pm2 -g
 
     pm2 startup systemd
-    sudo env PATH=$PATH:/home/$USER_ID/.nvm/versions/node/v16.14.0/bin /home/$USER_ID/.nvm/versions/node/v16.14.0/lib/node_modules/pm2/bin/pm2 startup systemd -u $USER_ID --hp /home/$USER_ID
+    sudo env PATH=$PATH:/home/$USER_ID/.nvm/versions/node/v18.12.0/bin /home/$USER_ID/.nvm/versions/node/v18.12.0/lib/node_modules/pm2/bin/pm2 startup systemd -u $USER_ID --hp /home/$USER_ID
     pm2 save
 
 
